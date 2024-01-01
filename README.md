@@ -78,5 +78,25 @@ This is the second hint
 ```
 4. In NGHMenu component, fill the Hints path with "Assets/ngh/"
 
-If you now open the Guides view, you should see a button with text "A sample guide". You might also see the default guide. You can set it non visible in the AC Menu Manager.
-When you click the "A sample guide" button you should see the Hints view. It will show you text "This is the first hint". When you click the next hint button you should see text "This is the second hint" and the next hint button becomes invisible.
+If you now open the Guides view, you should see a button with the text "A sample guide". You might also see the default guide. You can set it non-visible in the AC Menu Manager.
+When you click the "A sample guide" button you should see the Hints view. It will show you the text "This is the first hint". When you click the next hint button you should see the text "This is the second hint" and the next hint button becomes invisible.
+
+### Creating a conditional guide
+1. Create a new file named "conditional.md" inside the ngh folder. Please note the name can be anything but don't use spaces in the name.
+2. Find two boolean variables from your game inside the Variable Manager. Take note of the name of the variables. Lets say they are "Variable 1" and "Variable 2".
+4. Add the following content inside the conditional.md file
+```
+---
+title: This guide is visible when variable one is true
+when: Variable 1
+---
+
+# ((when Variable 2))
+This hint is visible when variable two is true.
+
+# ((until Variable 2))
+This hint is visible when variable two is false.
+```
+
+If you now open the Guides view, you should see only the sample.md. Set the Variable 1 to true in the game and open the Guides menu, again. You should now see both sample.md and conditional.md guides. The hints of the conditional guide are shown depending on the
+value of Variable 2.
