@@ -5,11 +5,11 @@ First, install Adventure Creator following its instructions.
 2. Create an empty GameObject that will control the hints, name it "NGHHintController".
 3. Attach the NGHMenu component to the GameObject
 4. Select the Mode from the NGHMenu Inspector
- - "Adventure Creator Menu" uses the menus from the AC Menu manager, supports also prefab menus
- - "Adventure Creator Generic" lets you create custom `UnityEngine.UI` based menus that do not use Adventure Creator menu manager
+    - "Adventure Creator Menu" uses the menus from the AC Menu manager, supports also prefab menus
+    - "Adventure Creator Generic" lets you create custom `UnityEngine.UI` based menus that do not use Adventure Creator menu manager
 5. Adjust the script execution order
- 1. Go to Edit > Project Settings > Script Execution Order
- 2. Add NGHMenu to the list and load it _before_ Default time
+    1. Go to Edit > Project Settings > Script Execution Order
+    2. Add NGHMenu to the list and load it _before_ Default time
 
 ## Instructions on using the Adventure Creator Menu mode
 In-game hints need two menu views: Guides view and Hints view.
@@ -22,39 +22,39 @@ First, Attach the AC Menu Manager to the NGHMenu component.
 
 ### The Guides view
 1. Create a prefab menu Canvas. Name it "GuidesMenu". The Canvas should include at least the following UI items:
-  - Another Canvas that has a Vertical Layout Group component
-  - Inside that Canvas, a Button. This button will be the sample button that will be cloned when listing the active guides.
+    - Another Canvas that has a Vertical Layout Group component
+    - Inside that Canvas, a Button. This button will be the sample button that will be cloned when listing the active guides.
 ![Prefab Guide Menu with the vertical layout group ><](https://raw.githubusercontent.com/nice-game-hints/ngh-unity-ac-doc/main/GuideMenuWithVerticalLayout.png)
 2. Create a menu in AC Menu manager. Name it "NGHGuides" and select "Unity Ui Prefab" as the source
 3. Add a button named GuideButton inside the NGHGuides menu.
- - Click type is "Crossfade"
- - Menu to switch to: "NGHHints" (this will be created next)
+   - Click type is "Crossfade"
+   - Menu to switch to: "NGHHints" (this will be created next)
 4. Attach the prefab to the NGHGuides menu
-  1. Drag the GuidesMenu prefab from Assets to Linked Canvas prefab
-  2. Drag the button from the prefab to GuideButton Linked button
+    1. Drag the GuidesMenu prefab from Assets to Linked Canvas prefab
+    2. Drag the button from the prefab to GuideButton Linked button
 ![Guides Menu in AC Menu Manager ><](https://raw.githubusercontent.com/nice-game-hints/ngh-unity-ac-doc/main/NGHGuidesMenu.png)
 
 You should be now able to see the menu in the game. You still need to show the menu somehow. The easiest (for testing) is to have it "Enabled on start".
 
 ### The Hints view
 1. Create a prefab Canvas. Name it "HintsMenu". The Canvas should include at least following UI items:
-  - A text (legacy) element (as of Adventure Creator 1.79.2 you cannot link TMP text to a Menu Label?) that will show the text content of the hint.
-  - A button (no need to be legacy) that will show the user the next hint. Will be automatically hidden when there are no more hints.
-  - _Optional_: A text (legacy) showing the current guide title
-  - _Optional_: A RawImage showing an image if the current hint has one
+    - A text (legacy) element (as of Adventure Creator 1.79.2 you cannot link TMP text to a Menu Label?) that will show the text content of the hint.
+    - A button (no need to be legacy) that will show the user the next hint. Will be automatically hidden when there are no more hints.
+    - _Optional_: A text (legacy) showing the current guide title
+    - _Optional_: A RawImage showing an image if the current hint has one
 2. Create a menu in AC Menu Manager. Name it "NGHHints" and select "Unity Ui Prefab" as the source
 3. Add a label named "HintContentText" inside the NGHHints menu
 4. Add a button named "NextHintButton" inside the NGHHints menu
- - On Click type select Custom Script
+   - On Click type select Custom Script
 5. Attach the prefab to the NGHGuides menu
-  1. Drag the HintsMenu prefab from Assets to Linked Canvas prefab
-  2. Drag the text from the prefab to HintContentText Linked Text
-  3. Drag the button from the prefab to the NextHintButton Linked button
+    1. Drag the HintsMenu prefab from Assets to Linked Canvas prefab
+    2. Drag the text from the prefab to HintContentText Linked Text
+    3. Drag the button from the prefab to the NextHintButton Linked button
 5. _Optional_: Add a label named "GuideTitle" inside the NGHHints menu
-  - Drag the corresponding text from the prefab to the Linked Text
+    - Drag the corresponding text from the prefab to the Linked Text
 6. _Optional_: Add a graphic named "HintContentImage" inside the NGHHints menu
-  - Select UI image type to "Raw Image"
-  - Drag the corresponding raw image from the prefab to the Linked Raw Image
+    - Select UI image type to "Raw Image"
+    - Drag the corresponding raw image from the prefab to the Linked Raw Image
 ![Hints Menu in AC Menu Manager ><](https://raw.githubusercontent.com/nice-game-hints/ngh-unity-ac-doc/main/NGHHintsMenu.png)
 
 You should be now able to click the guide button (set is visible in AC Menu Manager) in the Guides view and it should show you the HintsMenu prefab with default values.
