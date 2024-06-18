@@ -10,7 +10,7 @@ First, install Adventure Creator following its instructions.
 5. Adjust the script execution order
     1. Go to Edit > Project Settings > Script Execution Order
     2. Add NGHMenu to the list and load it _before_ Default time
-6. If you are using AC 1.79.x, change the "AC Assembly Name" to `Assembly-CSharp`
+6. If you are using AC 1.79.x, change the "AC Assembly Name" to `Assembly-CSharp` under the Advanced
 
 ## Instructions on using the Adventure Creator Menu mode
 In-game hints need two menu views: Guides view and Hints view.
