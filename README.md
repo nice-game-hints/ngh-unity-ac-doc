@@ -10,7 +10,9 @@ First, install Adventure Creator following its instructions.
 5. Adjust the script execution order
     1. Go to Edit > Project Settings > Script Execution Order
     2. Add NGHMenu to the list and load it _before_ Default time
-6. If you are using AC 1.79.x, change the "AC Assembly Name" to `Assembly-CSharp` under the Advanced
+6. If you want to use TextMeshPro, remember you have to have in Project Settings -> Player -> Scripting Define Symbols value "TextMeshProIsPresent" (without quotes)
+    1. If you want to enable NGH logging, you can add NGH_TRACE_ON into the Scripting Define Symbols
+8. If you are using AC 1.79.x, change the "AC Assembly Name" to `Assembly-CSharp` under the Advanced
 
 ## Instructions on using the Adventure Creator Menu mode
 In-game hints need two menu views: Guides view and Hints view.
