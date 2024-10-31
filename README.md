@@ -46,10 +46,11 @@ You should be now able to see the menu in the game. You still need to show the m
     - _Optional_: A text (legacy) showing the current guide title
     - _Optional_: A RawImage showing an image if the current hint has one
 2. Create a menu in AC Menu Manager. Name it "NGHHints" and select "Unity Ui Prefab" as the source
-3. Add a label named "HintContentText" inside the NGHHints menu
-4. Add a button named "NextHintButton" inside the NGHHints menu
+    - Set "Use TMPro Components" enabled to use TMPro
+4. Add a label named "HintContentText" inside the NGHHints menu
+5. Add a button named "NextHintButton" inside the NGHHints menu
    - On Click type select Custom Script
-5. Attach the prefab to the NGHGuides menu
+6. Attach the prefab to the NGHGuides menu
     1. Drag the HintsMenu prefab from Assets to Linked Canvas prefab
     2. Drag the text from the prefab to HintContentText Linked Text
     3. Drag the button from the prefab to the NextHintButton Linked button
